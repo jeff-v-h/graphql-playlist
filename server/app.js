@@ -9,7 +9,7 @@ mongoose.connect(
     'mongodb+srv://jeff:RjXFc4R7VUr4D50w@cluster0.aumx1.mongodb.net/gql-ninja?retryWrites=true&w=majority'
 );
 mongoose.connection.once('open', () => {
-    console.log('conneted to database');
+    console.log('connected to database');
 });
 
 // bind express with graphql

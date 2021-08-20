@@ -13,10 +13,21 @@ const getBooksQuery = gql`
 
 class BookList extends React.Component {
     render() {
-        console.log(this.props);
+        const { loading, error, books } = this.props.data;
+
+        if (loading) {
+            return <div>Loading...</div>;
+        }
+
+        if (error) {
+            return <div>Unable to load book list</div>;
+        }
+
         return (
             <ul className="booklist">
-                <li>book name</li>
+                {books.map((book, i) => (
+                    <li key={i}>{book.name}</li>
+                ))}
             </ul>
         );
     }

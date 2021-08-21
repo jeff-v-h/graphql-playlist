@@ -24,9 +24,9 @@ class BookList extends React.Component {
         }
 
         return (
-            <ul className="booklist">
-                {books.map((book, i) => (
-                    <li key={i}>{book.name}</li>
+            <ul className="book-list">
+                {books.map((book) => (
+                    <li key={book.id}>{book.name}</li>
                 ))}
             </ul>
         );

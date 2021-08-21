@@ -34,7 +34,10 @@ class AddBook extends React.Component {
 
     submitForm(e) {
         e.preventDefault();
-        console.log(this.state);
+        const { name, genre, authorId } = this.state;
+        this.props.addBook({
+            variables: { name, genre, authorId }
+        });
     }
 
     render() {

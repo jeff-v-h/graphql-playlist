@@ -1,5 +1,5 @@
 import React from 'react';
-import { getAuthorsQuery, addBookMutation } from '../services/BooksService';
+import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../services/BooksService';
 import { graphql } from '@apollo/client/react/hoc';
 import { flowRight as compose } from 'lodash';
 
@@ -36,7 +36,8 @@ class AddBook extends React.Component {
         e.preventDefault();
         const { name, genre, authorId } = this.state;
         this.props.addBook({
-            variables: { name, genre, authorId }
+            variables: { name, genre, authorId },
+            refetchQueries: [{ query: getBooksQuery }]
         });
     }
 

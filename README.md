@@ -1,7 +1,7 @@
 # GraphQL Playlist
 
-To help learn GraphQL.
-Alongside React, Node.js, Express.js, MongoDB.
+Diving into GraphQL.
+Alongside React, Node.js, Express.js and MongoDB.
 
 ## Getting Started
 
@@ -9,9 +9,14 @@ Alongside React, Node.js, Express.js, MongoDB.
 
 Node.js
 
-### Installation
+### API
 
-1. `cd server`
+1. From root directory, `cd server`
+2. `npm start`
+
+### Client
+
+1. From root directory, `cd client`
 2. `npm start`
 
 ### Testing

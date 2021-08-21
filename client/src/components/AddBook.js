@@ -1,15 +1,6 @@
 import React from 'react';
-import { gql } from '@apollo/client';
+import { getAuthorsQuery } from '../services/BooksService';
 import { graphql } from '@apollo/client/react/hoc';
-
-const getAuthorsQuery = gql`
-    query GetAuthors {
-        authors {
-            name
-            id
-        }
-    }
-`;
 
 class AddBook extends React.Component {
     displayAuthorsList() {

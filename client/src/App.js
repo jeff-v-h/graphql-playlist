@@ -1,7 +1,7 @@
 import React from 'react';
 import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 
-import BookList from './components/Booklist';
+import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 
 // apollo client setup

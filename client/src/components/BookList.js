@@ -15,11 +15,11 @@ class BookList extends React.Component {
         const { loading, error, books } = this.props.data;
 
         if (loading) {
-            return <div>Loading...</div>;
+            return <div className="book-list">Loading...</div>;
         }
 
         if (error) {
-            return <div>Unable to load book list</div>;
+            return <div className="book-list">Unable to load book list</div>;
         }
 
         return (

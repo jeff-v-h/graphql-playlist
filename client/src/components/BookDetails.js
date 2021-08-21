@@ -7,15 +7,15 @@ class BookDetails extends React.Component {
         const { loading, error, book } = this.props.data;
 
         if (!book) {
-            return <div>No book selected...</div>;
+            return <div className="book-details">No book selected...</div>;
         }
 
         if (loading) {
-            return <div>Loading...</div>;
+            return <div className="book-details">Loading...</div>;
         }
 
         if (error) {
-            return <div>Unable to load book data</div>;
+            return <div className="book-details">Unable to load book data</div>;
         }
 
         return (

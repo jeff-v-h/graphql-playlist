@@ -4,8 +4,11 @@ import { graphql } from '@apollo/client/react/hoc';
 
 class BookDetails extends React.Component {
     render() {
-        console.log(this.props.data);
         const { loading, error, book } = this.props.data;
+
+        if (!book) {
+            return <div>No book selected...</div>;
+        }
 
         if (loading) {
             return <div>Loading...</div>;
@@ -17,7 +20,15 @@ class BookDetails extends React.Component {
 
         return (
             <div className="book-details">
-                <p>{book.name}</p>
+                <h2>{book.name}</h2>
+                <p>{book.genre}</p>
+                <p>{book.author.name}</p>
+                <p>All books by this author</p>
+                <ul className="authors-books">
+                    {book.author.books.map((item) => (
+                        <li key={item.id}>{item.name}</li>
+                    ))}
+                </ul>
             </div>
         );
     }

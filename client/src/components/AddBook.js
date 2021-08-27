@@ -1,7 +1,7 @@
 import React from 'react';
 import { getAuthorsQuery, addBookMutation, getBooksQuery } from '../services/BooksService';
 import { graphql } from '@apollo/client/react/hoc';
-import { flowRight as compose } from 'lodash';
+import compose from 'lodash.flowright';
 
 class AddBook extends React.Component {
     constructor(props) {
